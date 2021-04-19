@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>前端模块化 - ES Module</title>
+</head>
+
+<body>
+    <script type="module">
+        // 基本导出
+        // import { add, sub } from './lib.js';
+        // console.log('add:', add(1, 2));
+        // console.log('sub:', sub(1, 2));
+        // 字段导出规则
+        //
+        import { obj, count, addCount } from './module.js'
+        console.log('start obj.count: %d count: %d:', obj.count, count)
+        addCount()
+        console.log('start obj.count: %d count: %d:', obj.count, count)
+
+        setInterval(() => {
+          console.log('timer obj.count: %d count: %d:', obj.count, count)
+        }, 3000)
+
+        // 循环依赖问题 // import moduleA from './A.js' // import moduleB from './B.js' // console.log('main moduleA:', moduleA) // console.log('main moduleB:', moduleB)
+    </script>
+</body>
+
+</html>
