@@ -17,16 +17,19 @@
         // console.log('sub:', sub(1, 2));
         // 字段导出规则
         //
-        import { obj, count, addCount } from './module.js'
-        console.log('start obj.count: %d count: %d:', obj.count, count)
-        addCount()
-        console.log('start obj.count: %d count: %d:', obj.count, count)
+        // import { obj, count, addCount } from './module.js'
+        // console.log('start obj.count: %d count: %d:', obj.count, count)
+        // addCount()
+        // console.log('start obj.count: %d count: %d:', obj.count, count)
+        //
+        // setInterval(() => {
+        //   console.log('timer obj.count: %d count: %d:', obj.count, count)
+        // }, 3000)
 
-        setInterval(() => {
-          console.log('timer obj.count: %d count: %d:', obj.count, count)
-        }, 3000)
-
-        // 循环依赖问题 // import moduleA from './A.js' // import moduleB from './B.js' // console.log('main moduleA:', moduleA) // console.log('main moduleB:', moduleB)
+        // 循环依赖问题
+        import moduleA from './A.js'
+        // import moduleB from './B.js'
+        console.log('main moduleA:', moduleA) // console.log('main moduleB:', moduleB)
     </script>
 </body>
 
