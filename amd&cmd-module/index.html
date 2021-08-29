@@ -8,10 +8,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1779049_flv19rnrzxk.css" />
     <title>前端模块化 - AMD&CMD</title>
+    <style>
+        html,body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        #main-iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 
 <body>
-    <script src="js/require.js" data-main="js/main"></script>
+    <iframe id="main-iframe" frameborder="0"></iframe>
+    <script src="js/require.js" data-main="main"></script>
     <script src="index.js"></script>
 </body>
 
